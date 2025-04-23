@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@media screen and (min-width: 820px){
+    header{
+        top: 0px;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    a{
+        margin: 10px;
+    }
+    main > h1{
+        display: none;
+    }
+    .links{
+        width: 50vw;
+        float: right;
+    }
+    .titulo{
+        display: block;
+    }
+    .titulo > h1{
+        font-size: 1.5em;
+        color: white;
+        font-weight: lighter;
+    }
+}
