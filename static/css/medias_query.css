@@ -8,8 +8,8 @@
     a{
         margin: 10px;
     }
-    main > h1{
-        display: none;
+    main{
+        margin-top: 90px;
     }
     .links{
         width: 50vw;
@@ -22,5 +22,8 @@
         font-size: 1.5em;
         color: white;
         font-weight: lighter;
+    }
+    section{
+        width: 50vw;
     }
 }
