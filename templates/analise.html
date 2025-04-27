@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Age Finance</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/medias_query.css">
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Financeiro New Age</h1>
+        </div>
+        <div class="links">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="graficos.html">Gráficos</a>
+                <a href="#">Análise de ações</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="texto">
+                <h1>Análise de ações</h1>
+                <p>Aqui será mostrado dados que importam para mim ao analisar se uma ação é boa para investimento, deixando bem claro que não sou profissional e não estou recomendando nada.</p>
+                <table>
+                    <thead>
+                        <th>Código da ação</th>
+                        <th>D.Y</th>
+                        <th>PVP</th>
+                        <th>PL</th>
+                        <th>Li12m</th>
+                    </thead>
+                    <tbody>
+                        {% for nome in nomes %}
+                        <tr>
+                            <td>{{ nome }}</td>
+                            <td>{{dy[nome]}}</td>
+                            <td>{{pvp[nome]}}</td>
+                            <td>{{pl[nome]}}</td>
+                            <td>R$ {{liq2m[nome]}}0</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p>Aqui estão os dados das ações mais baratas e com maiores dividendos com base nos dados da fundamentus</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

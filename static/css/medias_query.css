@@ -5,6 +5,9 @@
         justify-content: space-around;
         padding: 20px;
     }
+    body{
+        height: 84vh;
+    }
     a{
         margin: 10px;
     }
