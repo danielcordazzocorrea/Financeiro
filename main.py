@@ -5,23 +5,25 @@ lista = []
 dy = {}
 pvp = {}
 pl = {}
-liq2m = {}
+roe = {}
 for c in df.index:
-    if df.loc[c]['dy'] > 0.07 and df.loc[c]['pvp'] < 1 and df.loc[c]['pl'] < 6 and df.loc[c]['pl'] > 0 and df.loc[c]['liq2m'] > 1500000:
+    if df.loc[c]['dy'] > 0.07 and df.loc[c]['pvp'] < 1 and df.loc[c]['pl'] < 6 and df.loc[c]['pl'] > 0 and df.loc[c]['roe'] > 0.15:
         lista.append(c)
-        dy[c] = float(df.loc[c]['dy'])
-        pvp[c] = float(df.loc[c]['pvp'])
-        pl[c] = float(df.loc[c]['pl'])
-        liq2m[c] = float(df.loc[c]['liq2m'])
+        dy[c] = float(f"{df.loc[c]['dy']:.2f}")
+        pvp[c] = float(f"{df.loc[c]['pvp']:.2f}")
+        pl[c] = float(f"{df.loc[c]['pl']:.2f}")
+        roe[c] = float(f"{df.loc[c]['roe']:.2f}")
 app = Flask(__name__)
 
 @app.route('/analise.html')
 def analise():
-    return render_template('analise.html', nomes=lista, dy=dy, pvp=pvp, pl=pl,liq2m=liq2m)
+    return render_template('analise.html', nomes=lista, dy=dy, pvp=pvp, pl=pl,roe=roe)
 @app.route('/graficos.html')
 def grafico():
     return render_template('graficos.html')
-
+@app.route('/')
+def home():
+    return render_template('index.html')
 @app.route('/index.html')
 def index():
     return render_template('index.html')

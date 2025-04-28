@@ -29,4 +29,10 @@
     section{
         width: 50vw;
     }
+    #analise{
+        margin-bottom: 0px;
+    }
+    .espaco{
+        height: 20px;
+    }
 }

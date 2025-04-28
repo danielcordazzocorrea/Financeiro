@@ -22,25 +22,36 @@
     </header>
     <main>
         <section>
-            <div class="texto">
+            <div class="texto" id="analise">
                 <h1>Análise de ações</h1>
                 <p>Aqui será mostrado dados que importam para mim ao analisar se uma ação é boa para investimento, deixando bem claro que não sou profissional e não estou recomendando nada.</p>
+                <form action="main.py">
+                    <label for="idy">Mínimo de Dividend Yield:</label><br>
+                    <input type="number" id="idy" name="div" min="0" placeholder="Valor em porcentagem">% <br>
+                    <label for="ipvp">Máximo de Preço/Valor Patrimonial:</label><br>
+                    <input type="number" id="ipvp" name='pat' min="0" step="0.1"><br>
+                    <label for="ipl">Máximo de Preço/Lucro:</label><br>
+                    <input type="number" id="ipl" name='plu' min="0" step="0.5"><br>
+                    <label for="iroe">Mínimo ROE:</label><br>
+                    <input type="number" id="iroe" name='roe' min="0" placeholder="Valor em porcentagem">%<br>
+                    <div class="botao"><button type="submit">Ver ações</button></div>
+                </form>
                 <table>
                     <thead>
                         <th>Código da ação</th>
                         <th>D.Y</th>
                         <th>PVP</th>
                         <th>PL</th>
-                        <th>Li12m</th>
+                        <th>R.O.E</th>
                     </thead>
                     <tbody>
                         {% for nome in nomes %}
                         <tr>
                             <td>{{ nome }}</td>
-                            <td>{{dy[nome]}}</td>
+                            <td>{{dy[nome]}}%</td>
                             <td>{{pvp[nome]}}</td>
                             <td>{{pl[nome]}}</td>
-                            <td>R$ {{liq2m[nome]}}0</td>
+                            <td>{{roe[nome]}}%</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -48,6 +59,7 @@
                 <p>Aqui estão os dados das ações mais baratas e com maiores dividendos com base nos dados da fundamentus</p>
             </div>
         </section>
+        <div class="espaco"></div>
     </main>
 </body>
 </html>
