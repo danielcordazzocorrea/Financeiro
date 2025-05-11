@@ -89,6 +89,7 @@ button{
     cursor: pointer;
     transition: .2s;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
 }
 button:hover{
     background-color: rgb(81, 89, 211);
@@ -104,4 +105,16 @@ input{
     padding: 5px;
     margin: 5px;
     border-radius:  10px;
+}
+#açoes{
+    padding: 20px;
+}
+.espaco{
+    height: 90px;
+}
+#b_link:hover{
+    transform: scale(1);
+    background-color: rgb(81, 89, 211);
+    padding: 0px;
+    border-radius: 10px;
 }

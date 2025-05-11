@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ações</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/medias_query.css">
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Financeiro New Age</h1>
+        </div>
+        <div class="links">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="graficos.html">Gráficos</a>
+                <a href="analise.html">Análise de ações</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="açoes">
+            <table>
+                <thead>
+                    <th>Código da ação</th>
+                    <th>D.Y</th>
+                    <th>PVP</th>
+                    <th>PL</th>
+                    <th>Liq2m</th>
+                </thead>
+                <tbody>
+                    {% for nome in nomes %}
+                    <tr>
+                        <td>{{ nome }}</td>
+                        <td>{{dy[nome]}}%</td>
+                        <td>{{pvp[nome]}}</td>
+                        <td>{{pl[nome]}}</td>
+                        <td>R${{liq2m[nome]}}0</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <div class="espaco"></div>
+</body>
+</html>

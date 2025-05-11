@@ -32,30 +32,10 @@
                     <input type="number" id="ipvp" name='pat' min="0" step="0.1"><br>
                     <label for="ipl">Máximo de Preço/Lucro:</label><br>
                     <input type="number" id="ipl" name='plu' min="0" step="0.5"><br>
-                    <label for="iliq">Mínima Líquidez:</label><br>
+                    <label for="iliq">Mínima Líquidez de 2 meses:</label><br>
                     <input type="number" id="iliq" name='liq2m' min="0" step="1000"><br>
-                    <div class="botao"><button id='button' onclick="clicar()" type="submit" name="botao">Ver ações</button></div>
+                    <div class="botao"><a id="b_link" href="acoes.html"><button id='button' onclick="clicar()" type="submit" name="botao">Ver ações</button></a></div>
                 </form>
-                <table>
-                    <thead>
-                        <th>Código da ação</th>
-                        <th>D.Y</th>
-                        <th>PVP</th>
-                        <th>PL</th>
-                        <th>Liq2m</th>
-                    </thead>
-                    <tbody>
-                        {% for nome in nomes %}
-                        <tr>
-                            <td>{{ nome }}</td>
-                            <td>{{dy[nome]}}%</td>
-                            <td>{{pvp[nome]}}</td>
-                            <td>{{pl[nome]}}</td>
-                            <td>R${{liq2m[nome]}}0</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
                 <p>Aqui estão os dados das ações mais baratas e com maiores dividendos com base nos dados da fundamentus</p>
             </div>
         </section>
