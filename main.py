@@ -18,7 +18,7 @@ def filtrar():
         print(dyv)
         if df.loc[c]['dy'] > dyv and df.loc[c]['pvp'] < 1 and df.loc[c]['pl'] < 6 and df.loc[c]['pl'] > 0 and df.loc[c]['liq2m'] > 1500000:
             lista.append(c)
-            dy[c] = float(f"{df.loc[c]['dy']:.2f}")
+            dy[c] = float(f"{(df.loc[c]['dy'] * 100):.2f}")
             pvp[c] = float(f"{df.loc[c]['pvp']:.2f}")
             pl[c] = float(f"{df.loc[c]['pl']:.2f}")
             liq2m[c] = float(f"{df.loc[c]['liq2m']:.2f}")
