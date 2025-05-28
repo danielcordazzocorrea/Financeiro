@@ -26,14 +26,23 @@
                 <h1>Calculadora de Juros Compostos</h1>
             </div>
             <div class="calculadora">
-                <label for="inico">Capital inicial:</label>
+                <label for="inico">Capital inicial:</label><br>
                 <input type="number" name="inicial" id="incio"><br>
-                <label for="juros">Taxa de Juros:</label>
+                <label for="juros">Taxa de Juros:</label><br>
                 <input type="number" name="juros" id="juros">% <br>
-                <label for="tempo">Tempo:</label>
+                <label for="tempo">Tempo:</label><br>
                 <input type="number" name="tempo" id="tempo">
+                <select name="tempo" id="tempo">
+                    <option value="anos">Anos</option>
+                    <option value="meses">Meses</option>
+                </select><br>
+                <label for="aporte">Aporte Mensal:</label><br>
+                <input type="number" name="aporte" id="aporte" value="0">
             </div>
+            <div id="botao_calc"><button id="calcular" onclick="calcular()">Calcular</button></div>
+            <div id="res"></div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
