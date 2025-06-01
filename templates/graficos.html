@@ -26,22 +26,29 @@
                 <h1>Calculadora de Juros Compostos</h1>
             </div>
             <div class="calculadora">
-                <label for="inico">Capital inicial:</label><br>
-                <input type="number" name="inicial" id="inicio" min="0"><br>
-                <label for="juros">Taxa de Juros:</label><br>
-                <input type="number" name="juros" id="juros">% <br>
-                <label for="itempo">Tempo:</label><br>
-                <input type="number" name="itempo" id="itempo" min="0">
-                <select name="tempo" id="tempo">
-                    <option value="Anos">Anos</option>
-                    <option value="Meses">Meses</option>
-                </select><br>
-                <label for="aporte">Aporte Mensal:</label><br>
-                <input type="number" name="aporte" id="aporte" value="0">
+                <div>
+                    <label for="inico">Capital inicial:</label><br>
+                    <input type="number" name="inicial" id="inicio" min="0"><br>
+                    <label for="juros">Taxa de Juros:</label><br>
+                    <input type="number" name="juros" id="juros">%                <select name="tempo_j" id="tempo_j">
+                        <option value="Anual">Anual</option>
+                        <option value="Mensal">Mensal</option>
+                    </select><br>
+                    <label for="itempo">Tempo:</label><br>
+                    <input type="number" name="itempo" id="itempo" min="0">
+                    <select name="tempo" id="tempo">
+                        <option value="Anos">Anos</option>
+                        <option value="Meses">Meses</option>
+                    </select><br>
+                    <label for="aporte">Aporte Mensal:</label><br>
+                    <input type="number" name="aporte" id="aporte" value="0">
+                </div>
             </div>
-            <div id="botao_calc"><button id="calcular" onclick="calcular()">Calcular</button></div>
-            <div id="botao_calc">
+            <div class="botao_calc"><button id="calcular" onclick="calcular()">Calcular</button></div>
+            <div class="resultados">
                 <div id="res"></div>
+                <div id="valor_investido"></div>
+                <div id="valor ganho"></div>
             </div>
         </section>
     </main>
