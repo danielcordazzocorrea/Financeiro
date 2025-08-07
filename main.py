@@ -42,7 +42,6 @@ def filtrar():
             pvp[c] = float(f"{df.loc[c]['pvp']:.2f}")
             pl[c] = float(f"{df.loc[c]['pl']:.2f}")
             liq2m[c] = float(f"{df.loc[c]['liq2m']:.2f}")
-
     return render_template('acoes.html', nomes=lista, dy=dy, pvp=pvp, pl=pl,liq2m=liq2m)
 @app.route('/acoes.html')
 def acoes():
